@@ -7,7 +7,7 @@ const data = {
       subCategory: 'Dining',
       image: '/assets/images/TwistDiningTable.jpg',
       price: 288,
-      counInStock: 9,
+      countInStock: 9,
       rating: 4.5,
       numReviews: 10,
       description:
@@ -20,7 +20,7 @@ const data = {
       subCategory: 'Office Chair',
       image: '/assets/images/OptimaHighBackChair.jpg',
       price: 211,
-      counInStock: 23,
+      countInStock: 23,
       rating: 4.0,
       numReviews: 10,
       description:
@@ -33,7 +33,7 @@ const data = {
       subCategory: 'Bedroom',
       image: '/assets/images/BromaBedSideTable.jpg',
       price: 211,
-      counInStock: 23,
+      countInStock: 23,
       rating: 4.2,
       numReviews: 14,
       description:
@@ -46,7 +46,7 @@ const data = {
       subCategory: 'Office Chair',
       image: '/assets/images/DeveloperChair.jpg',
       price: 211,
-      counInStock: 5,
+      countInStock: 0,
       rating: 4.8,
       numReviews: 10,
       description:
