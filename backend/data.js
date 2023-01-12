@@ -1,6 +1,7 @@
 const data = {
   products: [
     {
+      _id: '1',
       name: 'Twist Dining Table',
       slug: 'Twist-Dining-Table',
       category: 'Home Fourniture',
@@ -14,6 +15,7 @@ const data = {
         'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
     },
     {
+      _id: '2',
       name: 'Optima High Back Chair',
       slug: 'Optima-High-Back-Chair',
       category: 'Office Fourniture',
@@ -27,6 +29,7 @@ const data = {
         'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
     },
     {
+      _id: '3',
       name: 'Broma Bed Side Table',
       slug: 'Broma-Bed-Side-Table',
       category: 'Home Fourniture',
@@ -40,6 +43,7 @@ const data = {
         'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
     },
     {
+      _id: '4',
       name: 'Developer Chair',
       slug: 'Developer-Chair',
       category: 'Office Fourniture',
