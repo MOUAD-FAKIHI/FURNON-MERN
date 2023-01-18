@@ -16,8 +16,8 @@ export default function ShippingAddressScreen() {
   const [fullName, setFullName] = useState(shippingAddress.fullName || '');
   const [address, setAddress] = useState(shippingAddress.address || '');
   const [city, setCity] = useState(shippingAddress.city || '');
-  const [postaleCode, setPostaleCode] = useState(
-    shippingAddress.postaleCode || ''
+  const [postalCode, setPostaleCode] = useState(
+    shippingAddress.postalCode || ''
   );
   const [country, setCountry] = useState(shippingAddress.country || '');
   useEffect(() => {
@@ -33,13 +33,13 @@ export default function ShippingAddressScreen() {
         fullName,
         address,
         city,
-        postaleCode,
+        postalCode,
         country,
       },
     });
     localStorage.setItem(
       'shippingAddress',
-      JSON.stringify({ fullName, address, city, postaleCode, country })
+      JSON.stringify({ fullName, address, city, postalCode, country })
     );
     navigate('/payment');
   };
@@ -76,10 +76,10 @@ export default function ShippingAddressScreen() {
               required
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="postaleCode">
+          <Form.Group className="mb-3" controlId="postalCode">
             <Form.Label>Postale Code</Form.Label>
             <Form.Control
-              value={postaleCode}
+              value={postalCode}
               onChange={(e) => setPostaleCode(e.target.value)}
               required
             />
