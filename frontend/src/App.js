@@ -25,6 +25,7 @@ import SearchScreen from './screens/SearchScreen';
 import ProtectedRoute from './components/ProtectedRoute';
 import DashboardScreen from './screens/DashboardScreen';
 import AdminRoute from './components/AdminRoute';
+import furnonLogo from './assets/logos/furnonLogo.png';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -63,21 +64,41 @@ function App() {
       >
         <ToastContainer position="bottom-center" limit={1} />
         <header>
-          <Navbar bg="dark" variant="dark" expand="lg">
+          <Navbar className="NavBar" variant="dark" expand="lg">
             <Container>
               <Button
-                variant="dark"
+                className="btnToggler d-lg-none"
                 onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
               >
                 <i className="fas fa-bars"></i>
               </Button>
               <LinkContainer to="/">
-                <Navbar.Brand>FURNON</Navbar.Brand>
+                <Navbar.Brand>
+                  <img
+                    width="150px"
+                    height="auto"
+                    className="img-responsive"
+                    src={furnonLogo}
+                    alt="logo"
+                  />
+                </Navbar.Brand>
               </LinkContainer>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
-                <SearchBox />
-                <Nav className="me-auto w-100 justify-content-end">
+              <Navbar.Toggle
+                className="NavbarTogglerBtn"
+                aria-controls="basic-navbar-nav"
+              >
+                <Button className="btnToggler d-lg-none">
+                  <i class="fas fa-caret-down"></i>
+                </Button>
+              </Navbar.Toggle>
+              <Navbar.Collapse
+                className="d-lg-flex justify-content-center"
+                id="basic-navbar-nav"
+              >
+                <div className="w-100 d-flex justify-content-end">
+                  <SearchBox />
+                </div>
+                <Nav className="width50 width100 d-flex justify-content-end">
                   <Link to="/cart" className="nav-link">
                     Cart
                     {cart.cartItems.length > 0 && (
@@ -128,18 +149,11 @@ function App() {
               </Navbar.Collapse>
             </Container>
           </Navbar>
-          {/* <Link to="/">FURNON</Link> */}
-        </header>
-        <div
-          className={
-            sidebarIsOpen
-              ? 'active-nav side-navbar d-flex justify-content-between flex-wrap flex-column'
-              : 'side-navbar d-flex justify-content-between flex-wrap flex-column'
-          }
-        >
-          <Nav className="flex-column text-white w-100 p-2">
+          <Nav className="navbarLinks d-none d-lg-flex justify-content-center w-100 p-2">
             <Nav.Item>
-              <strong>Categories</strong>
+              <LinkContainer to="/" onClick={() => setSidebarIsOpen(false)}>
+                <Nav.Link>Home</Nav.Link>
+              </LinkContainer>
             </Nav.Item>
             {categories.map((category) => (
               <Nav.Item key={category}>
@@ -151,6 +165,52 @@ function App() {
                 </LinkContainer>
               </Nav.Item>
             ))}
+            <Nav.Item>
+              <LinkContainer to="/" onClick={() => setSidebarIsOpen(false)}>
+                <Nav.Link>About</Nav.Link>
+              </LinkContainer>
+            </Nav.Item>
+            <Nav.Item>
+              <LinkContainer to="/" onClick={() => setSidebarIsOpen(false)}>
+                <Nav.Link>Contact</Nav.Link>
+              </LinkContainer>
+            </Nav.Item>
+          </Nav>
+          {/* <Link to="/">FURNON</Link> */}
+        </header>
+        <div
+          className={
+            sidebarIsOpen
+              ? 'active-nav side-navbar d-flex justify-content-between flex-wrap flex-column'
+              : 'side-navbar d-flex justify-content-between flex-wrap flex-column'
+          }
+        >
+          <Nav className="flex-column text-white w-100 p-2">
+            <Nav.Item>
+              <LinkContainer to="/" onClick={() => setSidebarIsOpen(false)}>
+                <Nav.Link>Home</Nav.Link>
+              </LinkContainer>
+            </Nav.Item>
+            {categories.map((category) => (
+              <Nav.Item key={category}>
+                <LinkContainer
+                  to={{ pathname: '/search', search: `category=${category}` }}
+                  onClick={() => setSidebarIsOpen(false)}
+                >
+                  <Nav.Link>{category}</Nav.Link>
+                </LinkContainer>
+              </Nav.Item>
+            ))}
+            <Nav.Item>
+              <LinkContainer to="/" onClick={() => setSidebarIsOpen(false)}>
+                <Nav.Link>About</Nav.Link>
+              </LinkContainer>
+            </Nav.Item>
+            <Nav.Item>
+              <LinkContainer to="/" onClick={() => setSidebarIsOpen(false)}>
+                <Nav.Link>Contact</Nav.Link>
+              </LinkContainer>
+            </Nav.Item>
           </Nav>
         </div>
         <main>
