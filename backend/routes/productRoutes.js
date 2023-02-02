@@ -18,10 +18,10 @@ productRouter.post(
     const newProduct = new Product({
       name: 'sample name ' + Date.now(),
       slug: 'sample-name-' + Date.now(),
-      image: '/images/p1.jpg',
+      image: 'newProduct.jpg',
       price: 0,
       category: 'sample category',
-      brand: 'sample brand',
+      subCategory: 'sample brand',
       countInStock: 0,
       rating: 0,
       numReviews: 0,
