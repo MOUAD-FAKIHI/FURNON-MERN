@@ -69,21 +69,21 @@ main {
 .btnToggler:active:focus {
   background-color: #2f333a;
 }
-.NavbarTogglerBtn {
+.NavbarFooterTogglerBtn {
   padding: 0;
 }
 .inputSearch:focus {
   border-right: none;
   box-shadow: none;
 }
-/* NavBar */
-.NavBar {
+/* NavbarFooter */
+.NavbarFooter {
   background-color: #e7e7e7;
 }
-.navbarLinks{
-  background-color:#2f333a;
+.NavbarFooterLinks {
+  background-color: #2f333a;
 }
-.navbarLinks a{
+.NavbarFooterLinks a {
   color: #fff;
   margin: 0 15px;
   font-weight: bold;
@@ -91,35 +91,35 @@ main {
   align-items: center;
   justify-content: center;
 }
-.navbarLinks a:focus{
+.NavbarFooterLinks a:focus {
   color: #fff;
 }
 /*  */
-.NavBar a,
-.NavBar .show .nav-link,
-.NavBar a:focus,
-.side-navbar a {
+.NavbarFooter a,
+.NavbarFooter .show .nav-link,
+.NavbarFooter a:focus,
+.side-NavbarFooter a {
   font-weight: bold;
   color: #2f333a;
 }
-.navbarLinks a:hover,
-.NavBar a:hover,
-.NavBar .show .nav-link:hover,
-.side-navbar a:hover {
+.NavbarFooterLinks a:hover,
+.NavbarFooter a:hover,
+.NavbarFooter .show .nav-link:hover,
+.side-NavbarFooter a:hover {
   color: #ff7004;
 }
-.NavBar .dropdown-item:focus,
-.NavBar .dropdown-item.active {
+.NavbarFooter .dropdown-item:focus,
+.NavbarFooter .dropdown-item.active {
   color: #ff7004;
   background: none;
 }
 
 /*  */
 /* sidebar */
-.navbar-brand {
+.NavbarFooter-brand {
   font-weight: bold;
 }
-.side-navbar {
+.side-NavbarFooter {
   width: 240px;
   height: 100%;
   position: absolute;
@@ -131,10 +131,10 @@ main {
 .site-container {
   transition: 0.4s;
 }
-.width75{
+.width75 {
   width: 75%;
 }
-.width50{
+.width50 {
   width: 50%;
 }
 
@@ -145,7 +145,7 @@ main {
   .active-nav {
     left: 0;
   }
-  .width100{
+  .width100 {
     width: 100%;
   }
 }

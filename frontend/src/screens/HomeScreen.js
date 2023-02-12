@@ -1,10 +1,12 @@
-import { useEffect, useReducer, useState } from 'react';
+import { useEffect, useReducer } from 'react';
 import axios from 'axios';
 import { Row, Col } from 'react-bootstrap';
 import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
+import CarouselSlider from '../components/CarouselSlider';
+
 // import data from '../data';
 
 const reducer = (state, action) => {
@@ -46,8 +48,9 @@ function HomeScreen() {
       <Helmet>
         <title>FURNON</title>
       </Helmet>
-      <h1>Featured Products</h1>
-      <div className="products">
+      <CarouselSlider/>
+      <span className='text-center'><h2>Featured Products</h2></span>
+      <div className="products ps-5 pe-5">
         {loading ? (
           <LoadingBox />
         ) : error ? (

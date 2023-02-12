@@ -6,7 +6,7 @@ import ProductScreen from './screens/ProductScreen';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import { LinkContainer } from 'react-router-bootstrap';
-import { Badge, Button, Nav, NavDropdown } from 'react-bootstrap';
+import { Badge, Button, Col, Nav, NavDropdown, Row } from 'react-bootstrap';
 import { useContext, useEffect, useState } from 'react';
 import { Store } from './Store';
 import CartScreen from './screens/CartScreen';
@@ -67,7 +67,7 @@ function App() {
       >
         <ToastContainer position="bottom-center" limit={1} />
         <header>
-          <Navbar className="NavBar" variant="dark" expand="lg">
+          <Navbar className="NavbarFooter" variant="dark" expand="lg">
             <Container>
               <Button
                 className="btnToggler d-lg-none"
@@ -87,8 +87,8 @@ function App() {
                 </Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle
-                className="NavbarTogglerBtn"
-                aria-controls="basic-navbar-nav"
+                className="NavbarFooterTogglerBtn"
+                aria-controls="basic-NavbarFooter-nav"
               >
                 <Button className="btnToggler d-lg-none">
                   <i class="fas fa-caret-down"></i>
@@ -96,7 +96,7 @@ function App() {
               </Navbar.Toggle>
               <Navbar.Collapse
                 className="d-lg-flex justify-content-center"
-                id="basic-navbar-nav"
+                id="basic-NavbarFooter-nav"
               >
                 <div className="w-100 d-flex justify-content-end">
                   <SearchBox />
@@ -152,7 +152,7 @@ function App() {
               </Navbar.Collapse>
             </Container>
           </Navbar>
-          <Nav className="navbarLinks d-none d-lg-flex justify-content-center w-100 p-2">
+          <Nav className="NavbarFooterLinks d-none d-lg-flex justify-content-center w-100 p-2">
             <Nav.Item>
               <LinkContainer to="/" onClick={() => setSidebarIsOpen(false)}>
                 <Nav.Link>Home</Nav.Link>
@@ -184,8 +184,8 @@ function App() {
         <div
           className={
             sidebarIsOpen
-              ? 'active-nav side-navbar d-flex justify-content-between flex-wrap flex-column'
-              : 'side-navbar d-flex justify-content-between flex-wrap flex-column'
+              ? 'active-nav side-NavbarFooter d-flex justify-content-between flex-wrap flex-column'
+              : 'side-NavbarFooter d-flex justify-content-between flex-wrap flex-column'
           }
         >
           <Nav className="flex-column text-white w-100 p-2">
@@ -217,7 +217,7 @@ function App() {
           </Nav>
         </div>
         <main>
-          <Container className="mt-3">
+          <Container fluid className="p-0">
             <Routes>
               <Route path="/product/:slug" element={<ProductScreen />} />
               <Route path="/cart" element={<CartScreen />} />
@@ -288,8 +288,68 @@ function App() {
             </Routes>
           </Container>
         </main>
-        <footer>
-          <div className="text-center">All rights reserved</div>
+        <footer className="page-footer font-small blue pt-4 NavbarFooter">
+          <Container>
+            <Row>
+              <Col className="col-md-6 mt-md-0 mt-3">
+                <img
+                  width="150px"
+                  height="auto"
+                  className="img-responsive mb-2"
+                  src={furnonLogo}
+                  alt="logo"
+                />
+                <p>
+                  Torem ipsum dolor sit amet, consectetur adipisicing elitsed do
+                  eiusmo tempor incididunt ut labore et dolore magna elitsed do
+                  eiusmo tempor incididunt ut labore et dolore magna.
+                </p>
+              </Col>
+
+              <hr className="clearfix w-100 d-md-none pb-0" />
+
+              <Col>
+                <h5 className="text-uppercase">Links</h5>
+                <ul className="list-unstyled">
+                  <li>
+                    <Link to="/" className="nav-link">Link</Link>
+                  </li>
+                  <li>
+                    <Link to="/" className="nav-link">Link</Link>
+                  </li>
+                  <li>
+                    <Link to="/" className="nav-link">Link</Link>
+                  </li>
+                  <li>
+                    <Link to="/" className="nav-link">Link</Link>
+                  </li>
+                </ul>
+              </Col>
+
+              <Col>
+                <h5 className="text-uppercase">Links</h5>
+                <ul className="list-unstyled">
+                  <li>
+                    <Link to="/" className="nav-link">Link</Link>
+                  </li>
+                  <li>
+                    <Link to="/" className="nav-link">Link</Link>
+                  </li>
+                  <li>
+                    <Link to="/" className="nav-link">Link</Link>
+                  </li>
+                  <li>
+                    <Link to="/" className="nav-link">Link</Link>
+                  </li>
+                </ul>
+              </Col>
+            </Row>
+            <Row>
+              <div className="footer-copyright text-center py-3">
+                © 2023 Copyright:
+              </div>
+            </Row>
+          </Container>
         </footer>
       </div>
     </BrowserRouter>
