@@ -14,7 +14,7 @@ main {
 }
 .btn-primary,
 .btn-outline-primary {
-  background-color: #ffc000;
+  background-color: #ff7004;
   color: #000000;
 }
 .products {
@@ -27,7 +27,7 @@ main {
   margin: 1rem;
 }
 .rating span {
-  color: #ffc000;
+  color: #ff7004;
 }
 .rating .reviews {
   color: #404040;
@@ -137,7 +137,33 @@ main {
 .width50 {
   width: 50%;
 }
-
+/* Product Card */
+.productCard a{
+  text-decoration: none;
+  color: #2f333a;
+}
+.productCard a:hover{
+  color: #ff7004;
+  transition: 0.4s;
+}
+.productCard button{
+  color: #fff;
+  border: none;
+  background-color: #ff7004;
+}
+.productCard button:hover{
+  background-color: #2f333a;
+  transition: 0.4s;
+}
+.btnStyle button{
+  color: #fff;
+  border: none;
+  background-color: #ff7004;
+}
+.btnStyle button:hover{
+  background-color: #2f333a;
+  transition: 0.4s;
+}
 @media only screen and (max-width: 992px) {
   .active-cont {
     margin-left: 240px;

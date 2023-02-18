@@ -50,7 +50,7 @@ function HomeScreen() {
       </Helmet>
       <CarouselSlider/>
       <span className='text-center'><h2>Featured Products</h2></span>
-      <div className="products ps-5 pe-5">
+      <div className="products ps-5 pe-5 mt-3 mb-3">
         {loading ? (
           <LoadingBox />
         ) : error ? (

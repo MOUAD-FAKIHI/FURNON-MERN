@@ -5,7 +5,7 @@ import slider2 from '../assets/slides/slider-2.jpg';
 
 export default function CarouselSlider() {
   return (
-    <div className="mb-2">
+    <div className="mb-5">
       <Carousel fade>
         <Carousel.Item>
           <img className="d-block w-100" src={slider1} alt="First slide" />

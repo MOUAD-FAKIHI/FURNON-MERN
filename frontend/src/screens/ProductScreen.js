@@ -66,12 +66,12 @@ function ProductScreen() {
   ) : error ? (
     <MessageBox variant="danger">{error}</MessageBox>
   ) : (
-    <div>
+    <div className="p-5">
       <Row>
-        <Col md={6}>
+        <Col md={4}>
           <img className="img-large" src={product.image} alt={product.name} />
         </Col>
-        <Col md={3}>
+        <Col md={5}>
           <ListGroup variant="flush">
             <ListGroup.Item>
               <Helmet>
@@ -83,7 +83,7 @@ function ProductScreen() {
               <Rating rating={product.rating} numReviews={product.numReviews} />
             </ListGroup.Item>
             <ListGroup.Item>
-              Description:
+              <strong>Description:</strong>
               <p>{product.description}</p>
             </ListGroup.Item>
           </ListGroup>
@@ -112,7 +112,7 @@ function ProductScreen() {
                 </ListGroup.Item>
                 {product.countInStock > 0 && (
                   <ListGroup.Item>
-                    <div className="d-grid">
+                    <div className="d-grid btnStyle">
                       <Button onClick={addToCartHandler} variant="primary">
                         Add to cart
                       </Button>

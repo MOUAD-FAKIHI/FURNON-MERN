@@ -140,7 +140,7 @@ export default function ProductEditScreen() {
   };
 
   return (
-    <Container className="small-container">
+    <Container className="p-5">
       <Helmet>
         <title>Edit Product ${productId}</title>
       </Helmet>
