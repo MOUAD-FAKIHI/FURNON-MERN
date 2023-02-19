@@ -44,7 +44,7 @@ export default function ShippingAddressScreen() {
     navigate('/payment');
   };
   return (
-    <div>
+    <div className="p-3">
       <Helmet>
         <title>Shipping Address</title>
       </Helmet>
@@ -92,7 +92,7 @@ export default function ShippingAddressScreen() {
               required
             />
           </Form.Group>
-          <div className="mb-3">
+          <div className="mb-3 btnStyle">
             <Button variant="primary" type="submit">
               Continue
             </Button>

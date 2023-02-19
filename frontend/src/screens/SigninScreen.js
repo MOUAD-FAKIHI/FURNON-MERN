@@ -40,7 +40,7 @@ export default function SinginScreen() {
   }, [navigate, redirect, userInfo]);
 
   return (
-    <Container className="small-container">
+    <Container className="small-container p-3">
       <Helmet>
         <title>Sign In</title>
       </Helmet>
@@ -62,10 +62,10 @@ export default function SinginScreen() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <div className="mb-3">
+        <div className="mb-3 btnStyle">
           <Button type="submit">Sign In</Button>
         </div>
-        <div className="mb-3">
+        <div className="mb-3 linkStyle">
           New customer?{' '}
           <Link to={`/signup?redirect=${redirect}`}>Creat your account</Link>
         </div>

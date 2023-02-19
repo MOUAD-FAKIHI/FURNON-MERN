@@ -26,7 +26,7 @@ export default function PaymentMethodScreen() {
     navigate('/placeorder');
   };
   return (
-    <div>
+    <div className="p-3">
       <CheckoutSteps step1 step2 step3 />
       <div className="container small-container">
         <Helmet>
@@ -54,7 +54,7 @@ export default function PaymentMethodScreen() {
               onChange={(e) => setPaymentMethod(e.target.value)}
             />
           </div>
-          <div className="mb-3">
+          <div className="mb-3 btnStyle">
             <Button type="submit">Continue</Button>
           </div>
         </Form>

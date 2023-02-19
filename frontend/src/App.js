@@ -29,6 +29,8 @@ import furnonLogo from './assets/logos/furnonLogo.png';
 import ProductListScreen from './screens/ProductListScreen';
 import ProductEditScreen from './screens/ProductEditScreen';
 import OrderListScreen from './screens/OrderListScreen';
+import UserListScreen from './screens/UserListScreen';
+import UserEditScreen from './screens/UserEditScreen';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -105,7 +107,7 @@ function App() {
                   <Link to="/cart" className="nav-link">
                     Cart
                     {cart.cartItems.length > 0 && (
-                      <Badge pill bg="danger">
+                      <Badge pill className="badgeStyle">
                         {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
                       </Badge>
                     )}
@@ -269,6 +271,14 @@ function App() {
                 }
               />
               <Route
+                path="/admin/users"
+                element={
+                  <AdminRoute>
+                    <UserListScreen />
+                  </AdminRoute>
+                }
+              />
+              <Route
                 path="/admin/products"
                 element={
                   <AdminRoute>
@@ -281,6 +291,14 @@ function App() {
                 element={
                   <AdminRoute>
                     <ProductEditScreen />
+                  </AdminRoute>
+                }
+              />
+                            <Route
+                path="/admin/user/:id"
+                element={
+                  <AdminRoute>
+                    <UserEditScreen />
                   </AdminRoute>
                 }
               />
@@ -346,7 +364,7 @@ function App() {
             </Row>
             <Row>
               <div className="footer-copyright text-center py-3">
-                © 2023 Copyright:
+                © 2023 Copyright: FURNON
               </div>
             </Row>
           </Container>

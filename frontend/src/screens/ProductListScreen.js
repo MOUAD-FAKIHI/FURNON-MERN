@@ -6,7 +6,7 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { toast } from 'react-toastify';
 import { getError } from '../utils';
-import { Button, Col, Row } from 'react-bootstrap';
+import { Button, Col, Row, Table } from 'react-bootstrap';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -138,7 +138,7 @@ export default function ProductListScreen() {
           <h1>Products</h1>
         </Col>
         <Col className="col text-end">
-          <div>
+          <div className="btnStyle">
             <Button type="button" onClick={createHandler}>
               Create Product
             </Button>
@@ -154,7 +154,7 @@ export default function ProductListScreen() {
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <>
-          <table className="table">
+          <Table striped responsive size="sm">
             <thead>
               <tr>
                 <th>ID</th>
@@ -193,7 +193,7 @@ export default function ProductListScreen() {
                 </tr>
               ))}
             </tbody>
-          </table>
+          </Table>
           <div>
             {[...Array(pages).keys()].map((x) => (
               <Link

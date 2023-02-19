@@ -34,7 +34,7 @@ export default function CartScreen() {
   };
 
   return (
-    <div>
+    <div className="p-3">
       <Helmet>
         <title>Shopping Cart</title>
       </Helmet>
@@ -101,12 +101,12 @@ export default function CartScreen() {
                 <ListGroup.Item>
                   <h3>
                     Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}{' '}
-                    items):$
+                    items): $
                     {cartItems.reduce((a, c) => a + c.price * c.quantity, 0)}
                   </h3>
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  <div className="d-grid">
+                  <div className="d-grid btnStyle">
                     <Button
                       type="button"
                       onClick={checkoutHandler}

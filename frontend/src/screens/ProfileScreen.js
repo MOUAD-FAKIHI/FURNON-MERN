@@ -62,7 +62,7 @@ export default function ProfileScreen() {
   };
 
   return (
-    <div className="container small-container">
+    <div className="container small-container p-3">
       <Helmet>
         <title>User Profile</title>
       </Helmet>
@@ -99,7 +99,7 @@ export default function ProfileScreen() {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </Form.Group>
-        <div className="mb-3">
+        <div className="mb-3 btnStyle">
           <Button type="submit">Update</Button>
         </div>
       </form>

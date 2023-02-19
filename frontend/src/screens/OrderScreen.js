@@ -187,7 +187,7 @@ export default function OrderScreen() {
   ) : error ? (
     <MessageBox variant="danger">{error}</MessageBox>
   ) : (
-    <div>
+    <div className="p-3">
       <Helmet>
         <title>Order {orderId}</title>
       </Helmet>
@@ -305,7 +305,7 @@ export default function OrderScreen() {
                 {userInfo.isAdmin && order.isPaid && !order.isDelivered && (
                   <ListGroup.Item>
                     {loadingDeliver && <LoadingBox></LoadingBox>}
-                    <div className="d-grid">
+                    <div className="d-grid btnStyle">
                       <Button type="button" onClick={deliverOrderHandler}>
                         Deliver Order
                       </Button>

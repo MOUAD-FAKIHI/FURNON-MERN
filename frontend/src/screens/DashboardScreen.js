@@ -51,7 +51,7 @@ export default function DashboardScreen() {
     fetchData();
   }, [userInfo]);
   return (
-    <div>
+    <div className="p-3">
       <h1>Dashboard</h1>
       {loading ? (
         <LoadingBox />

@@ -47,7 +47,7 @@ export default function SingupScreen() {
   }, [navigate, redirect, userInfo]);
 
   return (
-    <Container className="small-container">
+    <Container className="small-container p-3">
       <Helmet>
         <title>Sign Up</title>
       </Helmet>
@@ -81,10 +81,10 @@ export default function SingupScreen() {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </Form.Group>
-        <div className="mb-3">
+        <div className="mb-3 btnStyle">
           <Button type="submit">Sign Up</Button>
         </div>
-        <div className="mb-3">
+        <div className="mb-3 linkStyle">
           Already have an account?{' '}
           <Link to={`/signin?redirect=${redirect}`}>Sign-In</Link>
         </div>
